@@ -1,0 +1,17 @@
+Task-1: Understanding Taxi Data
+hjs -D mapred.reduce.tasks=1 -file LoadMap.py -mapper LoadMap.py -file TripsCountReducer.py 
+ -reducer TripsCountReducer.py -input input -output Trip_Count
+ 
+hjs -D mapred.reduce.tasks=1 -file LoadMap.py -mapper LoadMap.py -file Usage_Months.py 
+ -reducer Usage_Months.py -input input -output Taxi_Usage_weekdays
+ 
+hjs -D mapred.reduce.tasks=1 -file LoadMap.py -mapper LoadMap.py -file Usage_Snow.py 
+-reducer Usage_Snow.py -input input -output Snow_Usage
+	
+Task-2: Understanding Tip Variation with changes in weather 
+hjs -D mapred.reduce.tasks=1 -file map_tipAnalysis.py -mapper map_tipAnalysis.py 
+ -file reduce_tipAnalysis.py -reducer reduce_tipAnalysis.py -input input -output Tip_Analysis
+ 
+Task-3: Understanding Group Riding with changes in weather 
+hjs -D mapred.reduce.tasks=1 -file map_groupRiding.py -mapper map_groupRiding.py 
+ -file reduce_groupRiding.py -reducer reduce_groupRiding.py -input input -output Group_Riding
