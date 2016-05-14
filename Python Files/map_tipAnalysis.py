@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+## The mapper takes in the two files (weather and taxi) and outputs a key value pair corresponding to <day, tip_for_a_ride> or <day, weather_type>
+
 import sys
 import os
 

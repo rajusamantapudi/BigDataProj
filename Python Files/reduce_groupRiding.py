@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+## the reducer takes in the mapper output and calculates to which bin of passenger count accounted for each of the temperature coming in from weather.
+
 import sys
 
 current_key = None
